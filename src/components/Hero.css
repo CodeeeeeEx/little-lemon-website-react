@@ -1,0 +1,39 @@
+.hero {
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background-color: rgba(0,0,0,0.5); /* 半透明黑色遮罩 */
+  background-blend-mode:overlay; /* 混合模式 */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+.cta-button {
+  background-color: #f4ce14;
+  color: #333;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+}
