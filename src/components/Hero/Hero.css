@@ -1,31 +1,30 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.hero {
+  display: flex;
+  min-height: 60vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #8bc34a, #689f38); /* 渐变参数，135度，从X颜色到X颜色 */
+  color: white;
+  flex-wrap: wrap; /* 手机端自动换行 */
 }
 
-.hero {
-  background-size: cover;
-  background-position: center;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  background-color: rgba(0,0,0,0.5); /* 半透明黑色遮罩 */
-  background-blend-mode:overlay; /* 混合模式 */
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 2rem;
 }
 
 .hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .cta-button {
@@ -33,13 +32,61 @@
   color: #333;
   border: none;
   padding: 12px 30px;
-  font-size: 1.1rem;
-  font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s;
+  font-weight: bold;
+  font-size: 1.1rem;
+
+  position: relative; /* 为阴影定位做准备 */
+  /* 🔥 核心调整：拆分过渡属性，颜色变快，位置变慢 */
+  transition: 
+    background-color 0.2s ease, /* 颜色变化：0.2秒，快 */
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), /* 位置变化：0.4秒，带弹性曲线 */
+    box-shadow 0.4s ease; /* 阴影变化：0.4秒 */
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
+  background-color: #f8d84e; /* 🔥 改成更亮的黄色，对比度更低，更柔和 */
+  transform: translateY(-4px); /* 上移距离稍微加大 */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* 阴影更柔和、范围更大 */
+}
+
+/* 🔥 新增：鼠标点击状态（:active） */
+.cta-button:active {
+  transform: translateY(-2px); /* 点击时下沉少一点 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08); /* 阴影更小 */
+}
+
+.hero-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- Hero 区域的弹性布局 --- */
+.hero-flex-container {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  justify-content: space-between; /* 左右拉开距离 */
+  gap: 2rem; /* 中间留点空隙 */
+}
+
+/* --- 响应式：小屏幕时变成上下结构 --- */
+@media (max-width: 768px) {
+  .hero-flex-container {
+    flex-direction: column; /* 变成上下排列 */
+    text-align: center; /* 文字居中 */
+  }
+  .hero-image img {
+    width: 100%; /* 图片占满宽度 */
+    max-width: 400px; /* 限制最大宽度 */
+  }
 }

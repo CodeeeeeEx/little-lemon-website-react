@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <nav className="nav">
         <div className="logo">
-          <h2>🍋 Little Lemon</h2>
+          <h2>🍋 小柠檬</h2>
         </div>
         <ul className="nav-links">
           <li><a href="#home">首页</a></li>

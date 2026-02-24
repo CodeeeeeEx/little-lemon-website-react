@@ -1,36 +1,63 @@
 .footer {
-  background-color: #333;
+  background-color: #2d2d2d;
   color: white;
-  padding: 3rem 2rem 1rem;
+  padding: 3rem 0 1rem;
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+.container {
   max-width: 1200px;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-.footer-section h3 {
-  color: #f4ce14; /* 柠檬黄 */
-  margin-bottom: 1rem;
+/* 🔥 核心调整：Footer 网格布局 */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 强制三列，和上面卡片对齐 */
+  gap: 2rem; /* 列间距 */
+  align-items: start; /* 顶部对齐 */
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* 统一左对齐，视觉更整齐 */
+}
+
+.footer-column a {
+  color: #bbbbbb; /* 默认颜色 */
+  text-decoration: none; /* 去掉下划线 */
+  display: inline-flex; /* 让图标和文字对齐 */
+  align-items: center;
+  gap: 0.3rem; /* 图标和文字之间加点间距 */
+}
+
+.footer-column a:hover {
+  color: #ffffff; /* 鼠标放上去变白（仅此一个效果） */
+}
+
+.footer-column h3 {
+  color: #ffcc00;
   font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.footer-section h4 {
+.footer-column h4 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-column p {
+  color: #cccccc;
+  font-size: 0.95rem; /* 文字稍微放大 */
   margin-bottom: 0.8rem;
-  color: #ccc;
-}
-
-.footer-section p {
-  margin-bottom: 0.5rem;
-  color: #aaa;
-  line-height: 1.4;
+  line-height: 1.4; /* 行高加大，阅读更舒服 */
 }
 
 .footer-bottom {
   text-align: center;
+  margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid #444;
   color: #888;
