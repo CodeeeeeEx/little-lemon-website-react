@@ -12,9 +12,24 @@
   margin: 0 auto;
 }
 
+/* 🔥 核心修改：Logo 容器样式（电脑端） */
+.logo {
+  display: flex;
+  align-items: center; /* 垂直居中 */
+  gap: 1px; /* 图片和文字之间的间距 */
+}
+
+/* 🔥 核心修改：Logo 图片样式（通用） */
+.logo-img {
+  width: 40px;   /* 强制宽度 40px */
+  height: 40px; /* 强制高度 40px */
+  object-fit: contain; /* 保持比例，不拉伸 */
+}
+
 .logo h2 {
   color: #333;
   margin: 0;
+  font-size: 1.5rem; /* 电脑端文字稍微大点 */
 }
 
 .nav-links {
@@ -34,4 +49,47 @@
 
 .nav-links a:hover {
   color: #495e57;
+}
+
+/* --- 针对手机端：Logo 和文字垂直排列 --- */
+@media (max-width: 992px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row; /* 改成横排 */
+    flex-wrap: wrap; /* 允许换行，如果一行放不下就换行 */
+    gap: 1rem; /* 链接之间的间距 */
+    justify-content: flex-start; /* 左对齐 */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* 手机端文字稍微小点 */
+    padding: 0.5rem; /* 加点内边距，方便点击 */
+  }
+  
+  .logo-img {
+    width: 35px; /* 手机端图片稍微缩小 */
+    height: 35px;
+  }
+  
+  .logo h2 {
+    font-size: 1.2rem; /* 手机端文字稍微缩小 */
+  }
 }

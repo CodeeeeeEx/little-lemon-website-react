@@ -31,7 +31,7 @@
 .menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -40,7 +40,7 @@
 .menu-item {
   background: white;
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 1rem;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   text-align: center;
   transition: transform 0.3s ease;
@@ -97,5 +97,23 @@
 @media (min-width: 1024px) {
   .menu-grid {
     grid-template-columns: repeat(3, 1fr); /* 强制 3 列 */
+  }
+}
+
+/* 🔥 新增：针对手机屏幕（768px 以下）强制 1 列 */
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr; /* 强制 1 列 */
+    gap: 1rem; /* 间距稍微缩小，手机屏幕小 */
+  }
+  
+  .menu-item {
+    padding: 1.5rem 1rem; /* 内边距稍微调整，手机端别太挤 */
+  }
+  
+  /* 手机端标题稍微缩小一点 */
+  .menu-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 }

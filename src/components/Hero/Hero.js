@@ -14,7 +14,10 @@ function Hero() {
             <button className="cta-button">立即预订</button>
           </div>
           <div className="hero-image">
-            <img src={dishImage} alt="美味菜肴" />
+            <img 
+              src={dishImage} 
+              alt="美味菜肴"
+            />
           </div>
         </div>
       </div>

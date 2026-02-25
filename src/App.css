@@ -32,3 +32,32 @@ a {
 ul, ol {
   list-style: none;
 }
+
+
+/* --- 通用响应式重置 --- */
+/* 针对中等屏幕（平板、大手机） */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem; /* 左右边距稍微缩小 */
+  }
+}
+
+/* 针对手机屏幕（重点！） */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem; /* 手机端边距更小，利用更多空间 */
+  }
+  
+  /* 全局字体调整：手机端文字稍微缩小一点点 */
+  body {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 2rem; /* 大标题缩小 */
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}

@@ -58,15 +58,26 @@
 }
 
 .hero-image {
-  flex: 1;
+  flex: 1; /* PC端让它占满剩余空间 */
   min-width: 300px;
   text-align: center;
+  height: 300px; /* 固定高度，防止抖动 */
+  
+  /* 容器样式 */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  
+  /* 🔥 核心：让图片在容器内居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-image img {
-  max-width: 100%;
-  height: 300px;
-  object-fit: cover;
+  /* PC端：图片尽量大，但不超过容器 */
+  width: 100%;
+  height: auto;
+  max-width: 100%; /* 防止溢出 */
   border-radius: 12px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
@@ -82,11 +93,29 @@
 /* --- 响应式：小屏幕时变成上下结构 --- */
 @media (max-width: 768px) {
   .hero-flex-container {
-    flex-direction: column; /* 变成上下排列 */
-    text-align: center; /* 文字居中 */
+    flex-direction: column;
+    text-align: center;
   }
+  
+  /* 手机端：容器不再占满，而是固定一个宽度 */
+  .hero-image {
+    width: 100%; /* 宽度占满屏幕 */
+    max-width: 400px; /* 限制最大宽度，防止太大 */
+    height: auto; /* 高度自适应 */
+    margin: 2rem auto 0; /* 上下留白，左右居中 */
+    
+    /* 手机端也要居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 手机端图片样式微调 */
   .hero-image img {
-    width: 100%; /* 图片占满宽度 */
-    max-width: 400px; /* 限制最大宽度 */
+    width: 100%; /* 图片占满容器 */
+    height: auto;
+    max-width: 100%; /* 防止溢出 */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   }
 }
