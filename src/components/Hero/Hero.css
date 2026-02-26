@@ -2,7 +2,8 @@
   display: flex;
   min-height: 60vh;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem; /* 中间留空隙 */
   padding: 4rem 2rem;
   background: linear-gradient(135deg, #8bc34a, #689f38); /* 渐变参数，135度，从X颜色到X颜色 */
   color: white;
@@ -94,28 +95,43 @@
 @media (max-width: 768px) {
   .hero-flex-container {
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    gap: 1rem;
   }
-  
+
+  .hero {
+    /* 确保整个 Hero 区域是 Flex 布局 */
+    display: flex;
+    flex-direction: column;
+    
+    /* 核心：垂直和水平都居中 */
+    justify-content: center; /* 垂直方向均匀分布 */
+    align-items: center;     /* 水平方向居中 */
+    
+    /* 设置一个最小高度，确保有足够的空间 */
+    min-height: 60vh; /* 或者 80vh，看你的需要 */
+    
+    /* 调整内边距，防止内容贴边 */
+    padding: 2rem 1rem;
+  }
+
+  /* 调整文字和按钮的间距 */
+  .hero-content {
+    text-align: center; /* 文字居中 */
+    margin-bottom: 1.5rem; /* 文字和按钮之间的间距 */
+    max-width: 100%;
+  }
+
   /* 手机端：容器不再占满，而是固定一个宽度 */
   .hero-image {
-    width: 100%; /* 宽度占满屏幕 */
-    max-width: 400px; /* 限制最大宽度，防止太大 */
-    height: auto; /* 高度自适应 */
-    margin: 2rem auto 0; /* 上下留白，左右居中 */
-    
-    /* 手机端也要居中 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 90%; /* 自动适应宽度 */
+    max-width: 400px;
+    margin-top: 1rem; /* 添加间距 */
   }
   
   /* 手机端图片样式微调 */
   .hero-image img {
-    width: 100%; /* 图片占满容器 */
+    width: 100%;
     height: auto;
-    max-width: 100%; /* 防止溢出 */
-    border-radius: 12px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   }
 }
