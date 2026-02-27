@@ -1,6 +1,6 @@
 # 🍋 小柠檬餐厅官网 (React重构版)
 
-**[小柠檬餐厅截图](https://codeeeeeex.github.io/little-lemon-website-react/screenshot.png)**
+**[小柠檬餐厅截图](https://github.com/CodeeeeeEx/little-lemon-website-react/blob/main/screenshot.png)**
 
 > 一个用React重构的响应式餐厅官网 | 职校前端实战项目
 
