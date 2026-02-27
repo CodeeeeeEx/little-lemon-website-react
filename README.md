@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# 🍋 小柠檬餐厅官网 (React重构版)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![小柠檬餐厅截图](https://codeeeeeex.github.io/little-lemon-website-react/screenshot.png)
 
-## Available Scripts
+> 一个用React重构的响应式餐厅官网 | 职校前端实战项目
 
-In the project directory, you can run:
+## 🌐 在线访问
 
-### `npm start`
+**[点击这里立即访问](https://codeeeeeex.github.io/little-lemon-website-react/)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🎯 项目介绍
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+这是我自学前端后完成的第一个React项目，从零开始重构了原生页面。展示了我的**工程化能力、响应式设计能力和用户体验思维**。
 
-### `npm test`
+## 🚀 技术栈
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **框架**: React 18
+- **样式**: CSS3 (Flexbox/Grid)
+- **版本控制**: Git + GitHub
+- **部署**: GitHub Pages
+- **开发工具**: VS Code
 
-### `npm run build`
+## 📱 功能亮点
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ✅ 完整的响应式设计（PC+手机完美适配）
+- ✅ 组件化开发（Header/Menu/Footer独立组件）
+- ✅ 微交互体验（按钮悬停、卡片点击反馈）
+- ✅ 可访问性优化（电话/网址一键跳转）
+- ✅ 真机测试通过
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🎨 设计思考
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **配色方案**: 绿色(#8bc34a) + 黄色(#f4ce14) 符合“柠檬”主题
+2. **视觉层次**: 渐变背景、卡片阴影、圆角设计
+3. **响应式布局**: 手机端导航垂直排列，菜单单列显示
+4. **用户体验**: 所有交互都有视觉反馈
 
-### `npm run eject`
+## 📁 项目结构
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+src/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+├── components/ # 组件目录
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+│ ├── Footer/ # 页脚信息
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+│ ├── Header/ # 顶部导航
 
-## Learn More
+│ ├── Hero/ # 主界面
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+│ ├── Menu/ # 菜单展示
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+├── images/ # 图片资源
