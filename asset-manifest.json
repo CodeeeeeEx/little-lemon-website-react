@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/little-lemon-website-react/static/css/main.9882b14e.css",
+    "main.css": "/little-lemon-website-react/static/css/main.d605776f.css",
     "main.js": "/little-lemon-website-react/static/js/main.0c9acc43.js",
     "static/media/柠檬鸡.jpg": "/little-lemon-website-react/static/media/柠檬鸡.1ab54510bd830a20b3ba.jpg",
     "static/media/食物.jpg": "/little-lemon-website-react/static/media/食物.9ae922a678b158424b30.jpg",
@@ -11,11 +11,11 @@
     "static/media/沙拉.jpg": "/little-lemon-website-react/static/media/沙拉.198d5776e9ac0ae57cd5.jpg",
     "static/media/柠檬.jpg": "/little-lemon-website-react/static/media/柠檬.07c9e48dfe82b1668025.jpg",
     "index.html": "/little-lemon-website-react/index.html",
-    "main.9882b14e.css.map": "/little-lemon-website-react/static/css/main.9882b14e.css.map",
+    "main.d605776f.css.map": "/little-lemon-website-react/static/css/main.d605776f.css.map",
     "main.0c9acc43.js.map": "/little-lemon-website-react/static/js/main.0c9acc43.js.map"
   },
   "entrypoints": [
-    "static/css/main.9882b14e.css",
+    "static/css/main.d605776f.css",
     "static/js/main.0c9acc43.js"
   ]
 }
